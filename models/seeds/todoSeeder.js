@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const Todo = require("../todo");
+const Todo = require("../todo.js");
 
 mongoose.connect(process.env.MONGODB_URI);
 
