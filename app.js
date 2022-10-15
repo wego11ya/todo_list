@@ -26,6 +26,7 @@ app.get("/", (req, res) => {
   // 拿到全部的 Todo 資料
   Todo.find()
     .lean()
+    .sort({ _id: "asc" }) // 根據_id作升冪排序ascending
     .then((todos) => res.render("index", { todos: todos }))
     .catch((error) => console.error(error));
 });
